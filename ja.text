@@ -1,0 +1,15 @@
+ https://youtube.googleapis.com/youtube/v3/playlists?channelId=%22UCeVMnSShP_Iviwkknt83cww%22&key=AIzaSyAvxLv_3pxLEWKRPgmDD7SxpOc9u9XEA0Q
+
+⁡⁢⁢⁣​‌‍‌𝗔𝗣𝗜 𝗖𝗔𝗹𝗹​⁡
+ // const options = {
+    //     method: 'GET',
+    //     headers: {
+    //         'X-RapidAPI-Key': '84335d21d7msh72d8bef517e42ebp11a494jsn1843b09aefd1',
+    //         'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
+    //     }
+    // };
+
+    // fetch('https://youtube-v31.p.rapidapi.com/search?&part=snippet&q=codeWithHarry&maxResults=50', options).then(response => response.json()).then(response => {
+
+    //     console.log(response)
+    // })

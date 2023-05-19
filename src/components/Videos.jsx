@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import VideoDetail from './VideoDetail';
 import ReactPlayer from "react-player";
 import {Link} from "react-router-dom";
-const Video = ({videos}) => {
+const Videos = ({videos}) => {
   return (
     <>
    
@@ -43,4 +43,4 @@ const Video = ({videos}) => {
   )
 }
 
-export default Video
+export default Videos

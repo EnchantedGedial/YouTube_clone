@@ -2,42 +2,55 @@ import React from 'react'
 import {useState, useEffect} from 'react';
 import NavBar from './components/NavBar';
 import SearchBar from './components/SearchBar';
-import Video from './components/Video';
+
 import VideoDetail from './components/VideoDetail';
 import {fetchFromApi} from "./utils/fetchFromApi";
+import Feeds from './components/Feeds';
+import Videos from './components/Videos';
 
 const Home = (props) => {
-    const [selectedCategory, setselectedCategory] = useState("dhruv rathee")
-    const [videos, setvideos] = useState()
-
-    const [search, setsearch] = useState()
+    const [selectedCategory, setselectedCategory] = useState("dhruv rathee");
+    const [videos, setvideos] = useState();
+  
+  
 
     
-    useEffect(() => {
-        setselectedCategory(props.Channel)
-      
-    }, [])
+    useEffect(() => { setselectedCategory(props.Channel)}, [])
+    
+    
     
     useEffect(() => {
+     
+  
+      fetchFromApi(`search?part=snippet&q=${props.Channel}`)
+        .then((data) => setvideos(data.items))
+       
+      }, [props.channel]);
+  
 
-        fetchFromApi(`search?part=snippet&q=${props.Channel}&order=date`).then((data) => {
-            setvideos(data.items)
+
+  
 
 
-        })
 
-    }, [props.Channel])
-    const searchIgnetion=(elem)=>{
-      setsearch(elem.target.value)
-    }
   return (
     <>
+    <Videos videos={videos}/>
+    {/* if({videos.snippet.channelId} ==="UCRzYN32xtBf3Yxsx5BvJWJw"){
 
-<input type="text" value={search} onChange={searchIgnetion} />
-        {search}
+      console.log(videos)
+    } */}
+{/* 
 
-        {console.log(videos)}
-        <Video videos={videos}/> {/* <ReactPlayer url={`https://www.youtube.com/watch?v=${item?.id?.videoId}`} controls/> */}
+          <Feeds />
+          <Feeds/>
+          <Feeds/>
+          <Feeds/>
+          <Feeds/>
+          
+
+          
+          {/* <ReactPlayer url={`https://www.youtube.com/watch?v=${item?.id?.videoId}`} controls/> */}
 
 
 

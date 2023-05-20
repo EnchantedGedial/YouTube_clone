@@ -20,15 +20,19 @@ const Videos = ({videos}) => {
           <p className="card-text">{item?.snippet?.description}</p>
           <p>{item?.snippet?.channelTitle}</p>
         </div>
+
       
-        {/* <VideoDetail ideaX={item?.id?.videoId}/> */}
+        <VideoDetail ideaX={item?.id?.videoId}/>
      
 
         {/* <ReactPlayer url={`https://www.youtube.com/watch?v=${item?.id?.videoId}`} controls/> */}
 
       
 
-          {/* <Link to={} className="btn btn-primary">View</Link> */}
+          <Link to={'/VideoDetail'} className="btn btn-primary">
+            
+            View
+          </Link>
        </div>
     
 

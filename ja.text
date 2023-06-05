@@ -13,3 +13,53 @@
 
     //     console.log(response)
     // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className="card  " style={{ width: "20rem"}}>
+//         <img src={item?.snippet?.thumbnails?.high?.url} className="card-img-top" alt="..."/>
+//         <div className="card-body">
+//           <Link to="detail">
+//           <h5 className=' '>{item?.snippet?.title}</h5>
+//           </Link>
+//           <p className="card-text">{item?.snippet?.description}</p>
+//           <p style={{fontSize:"25px", fontStyle:"bold"}}>{item?.snippet?.channelTitle}</p>
+//         </div>
+// {console.log(item)}
+      
+//         {/* <VideoDetail ideaX={item?.id?.videoId}/> */}
+     
+
+//         {/* <ReactPlayer url={`https://www.youtube.com/watch?v=${item?.id?.videoId}`} controls/> */}
+
+// {  console.log(item.id.playlistId)}
+//           <Link to={`/Video/${item?.id?.videoId}`} className="btn btn-primary">
+// View
+            
+          
+//           </Link>
+     </div>

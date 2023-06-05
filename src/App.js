@@ -10,12 +10,13 @@ const App = () => {
     <Router>
                <NavBar/>
                <Routes>
-                        <Route path='/' element={<Home/>}/>
-                        <Route path="/warikoo" element={<Home Channel="warikoo"/>}>
-                        <Route path="detail" element={<VideoDetail/>}/></Route>
+                        <Route path='/' element={<Home Channel="CodeWithHarry"/>}/>
+                        <Route path="/warikoo" element={<Home Channel="warikoo"/>}/>
+                        {/* <Route path="detail" element={<VideoDetail/>}/></Route> */}
                         <Route path ="/codewithharry" element={<Home Channel="CodeWithHarry"/>}/>
                         <Route path ="/ApnaCollege" element={<Home Channel="Apna College"/>}/>
                         <Route path ="/Javascript Mastery" element={<Home Channel="Javascript Mastery"/>}/>
+                        <Route path="Video/:id" element={<VideoDetail />} /> 
                
                </Routes>
 

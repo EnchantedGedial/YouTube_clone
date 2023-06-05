@@ -9,7 +9,7 @@ import Feeds from './components/Feeds';
 import Videos from './components/Videos';
 
 const Home = (props) => {
-    const [selectedCategory, setselectedCategory] = useState("dhruv rathee");
+    const [selectedCategory, setselectedCategory] = useState("CodeWithHarry");
     const [videos, setvideos] = useState();
   
   
@@ -35,15 +35,17 @@ const Home = (props) => {
 
   return (
     <>
-    <Videos videos={videos}/>
+       <Videos videos={videos}/>
+   
+   
+    {/* <Videos videos={videos}/> */}
     {/* if({videos.snippet.channelId} ==="UCRzYN32xtBf3Yxsx5BvJWJw"){
 
       console.log(videos)
     } */}
 {/* 
 
-          <Feeds />
-          <Feeds/>
+     <Feeds />    
           <Feeds/>
           <Feeds/>
           <Feeds/>

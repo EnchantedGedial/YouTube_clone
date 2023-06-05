@@ -11,6 +11,7 @@ const Feeds = ({videos}) => {
 
    <div  style={{display: "flex",justifyContent:"center" ,margin:"auto",flexWrap:"wrap",gap:"28px"}}>
     {videos?.map((item,index)=>(
+    
         <div className="card" style={{ width: "20rem"}}>
         <img src={item?.snippet?.thumbnails?.high?.url} className="card-img-top" alt="..."/>
         <div className="card-body">

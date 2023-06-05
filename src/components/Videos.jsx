@@ -18,20 +18,20 @@ const Videos = ({videos}) => {
           <h5 className="card-title">{item?.snippet?.title}</h5>
           </Link>
           <p className="card-text">{item?.snippet?.description}</p>
-          <p>{item?.snippet?.channelTitle}</p>
+          <p style={{fontSize:"25px", fontStyle:"bold"}}>{item?.snippet?.channelTitle}</p>
         </div>
-
+{console.log(item)}
       
-        <VideoDetail ideaX={item?.id?.videoId}/>
+        {/* <VideoDetail ideaX={item?.id?.videoId}/> */}
      
 
         {/* <ReactPlayer url={`https://www.youtube.com/watch?v=${item?.id?.videoId}`} controls/> */}
 
-      
-
-          <Link to={'/VideoDetail'} className="btn btn-primary">
+{  console.log(item.id.playlistId)}
+          <Link to={`Video/${item?.id?.videoId}`} className="btn btn-primary">
+View
             
-            View
+          
           </Link>
        </div>
     

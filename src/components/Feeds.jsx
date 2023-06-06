@@ -7,42 +7,52 @@ import VideoDetail from './VideoDetail';
 import { fetchFromApi } from '../utils/fetchFromApi';
 import ReactPlayer from "react-player";
 import {Link} from "react-router-dom";
-const Feeds = ({Channel}) => {
+const Feeds = ({name}) => {
 
   const [videos, setvideos] = useState();
 
 
   useEffect(() => {
 
-    fetchFromApi(`search?part=snippet&q=${Channel.Channel}`)
+    fetchFromApi(`search?part=snippet&q=${name}`)
       .then((data) => setvideos(data.items))
 
-  }, [Channel.Channel]);
+  }, [name]);
 
   return (
     <>
    
+<div className="flex w-11/12 pl-8">
 
-   
-   <div  style={{display: "flex",justifyContent:"center" ,margin:"auto",flexWrap:"wrap",gap:"28px"}}>
-    {videos?.map((item)=>(
-        <div className="card" style={{ width: "20rem"}}>
-        <img src={item?.snippet?.thumbnails?.high?.url} className="card-img-top" alt="..."/>
-        <div className="card-body">
-          <Link to="detail">
-          <h5 className="card-title">{item?.snippet?.title}</h5>
-          </Link>
-          <p className="card-text">{item?.snippet?.description}</p>
-          <p style={{fontSize:"25px", fontStyle:"bold"}}>{item?.snippet?.channelTitle}</p>
+   <div className='text-2xl font-bold '>{name}</div>
+</div>
+   <div className="container flex items-center m-2  m-auto flex-wrap justify-center">
+    {videos?.slice(5,9).map((item)=>(
+       
+       <Link to={`/Video/${item?.id?.videoId}`} >  
+    <div style={{width:300 ,height:300}} class="overflow-hidden   md:w-1/3 bg-white m-4 shadow-sm flex flex-col justify-center">
+        <div class="h-26 w-full overflow-hidden"> <img src={item?.snippet?.thumbnails?.high?.url} className="card-img-top" alt="..."/></div>
+        <div class="text-sm text-gray-500 m-2">{item.snippet.publishedAt.slice(0,10)}</div>
+        <div class="font-bold text-lg text-black m-2">{item.snippet.title.slice(0,30)}..</div>
+        <div className="flex">
+
+        <div class=" text-gray-500 m-2">{item?.snippet?.channelTitle}</div>
+        {/* <span className='pt-2.5'><MdVerified/></span> */}
         </div>
-
-          <Link to={`Video/${item?.id?.videoId}`} className="btn btn-primary">View </Link>
-       </div>
+       
+        
+        
+    </div>
+    
+    </Link>
+ 
     
 
 
+
+
 ))}
-</div>
+   </div>
 
 
     

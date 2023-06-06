@@ -4,6 +4,7 @@ import Home from './Home';
 import Feeds from './components/Feeds'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from './components/NavBar';
+import SearchFeed from './components/SearchFeed';
 const App = () => {
    
     return (
@@ -19,6 +20,7 @@ const App = () => {
                         <Route path ="/ApnaCollege" element={<Home Channel="Apna College"/>}/>
                         <Route path ="/Javascript Mastery" element={<Home Channel="Javascript Mastery"/>}/>
                         <Route path="Video/:id" element={<VideoDetail />} /> 
+                        <Route path='/search/:searchTerm' element={<SearchFeed/>}/>
                
                </Routes>
 

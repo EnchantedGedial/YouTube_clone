@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { CgProfile } from 'react-icons/cg';
+import SearchBar from './SearchBar';
 
 const NavBar = () => {
   return (
@@ -23,6 +24,7 @@ const NavBar = () => {
         <path d="M5 12h14M12 5l7 7-7 7"></path>
       </svg>
     </button> */}
+    <SearchBar/>
     <CgProfile className='text-indigo-500'/>
   </div>
 </header>

@@ -36,6 +36,7 @@ const Home = (props) => {
       <Feeds name={"warikoo"}/>
       <Feeds name={"appnacollege"}/>
       <Feeds name={"Javascript Mastery"}/>
+      <Feeds name={"Ali Abdaal"}/>
       
 
 

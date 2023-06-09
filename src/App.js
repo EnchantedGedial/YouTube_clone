@@ -15,10 +15,11 @@ const App = () => {
          
                         <Route path='/' element={<Home Channel="CodeWithHarry"/>}/>
                         <Route path="/warikoo" element={<Home Channel="warikoo"/>}/>
-                        {/* <Route path="detail" element={<VideoDetail/>}/></Route> */}
+                       
                         <Route path ="/codewithharry" element={<Home Channel="CodeWithHarry"/>}/>
                         <Route path ="/ApnaCollege" element={<Home Channel="Apna College"/>}/>
                         <Route path ="/Javascript Mastery" element={<Home Channel="Javascript Mastery"/>}/>
+                        <Route path ="/Ali Abdaal" element={<Home Channel="Ali Abdaal"/>}/>
                         <Route path="Video/:id" element={<VideoDetail />} /> 
                         <Route path='/search/:searchTerm' element={<SearchFeed/>}/>
                

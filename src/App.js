@@ -5,6 +5,7 @@ import Feeds from './components/Feeds'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from './components/NavBar';
 import SearchFeed from './components/SearchFeed';
+import Videos from './components/Videos';
 const App = () => {
    
     return (
@@ -15,7 +16,6 @@ const App = () => {
          
                         <Route path='/' element={<Home Channel="CodeWithHarry"/>}/>
                         <Route path="/warikoo" element={<Home Channel="warikoo"/>}/>
-                       
                         <Route path ="/codewithharry" element={<Home Channel="CodeWithHarry"/>}/>
                         <Route path ="/ApnaCollege" element={<Home Channel="Apna College"/>}/>
                         <Route path ="/Javascript Mastery" element={<Home Channel="Javascript Mastery"/>}/>

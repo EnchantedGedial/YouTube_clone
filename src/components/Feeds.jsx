@@ -18,13 +18,15 @@ const Feeds = ({name}) => {
       .then((data) => setvideos(data.items))
 
   }, [name]);
-
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
   return (
     <>
    
 <div className="flex w-11/12 pl-8">
 
-   <div className='text-2xl font-bold '>{name}</div>
+   <div className='text-2xl font-bold '>{capitalizeFirstLetter(name)}</div>
 </div>
    <div className="container flex items-center m-2  m-auto flex-wrap justify-center">
     {videos?.slice(5,9).map((item)=>(

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { CgProfile } from 'react-icons/cg';
 import SearchBar from './SearchBar';
+// import ""
 
 const NavBar = () => {
   return (
@@ -9,8 +10,8 @@ const NavBar = () => {
  
 
 
-<header class="text-gray-600 body-font">
-  <div class="container mx-auto flex flex-wrap p-5 pt-2 flex-col md:flex-row items-center">
+<header class="text-gray-600 mt-0  body-font">
+  <div class="container mx-auto flex flex-wrap p-5 pt-0 flex-col md:flex-row items-center">
     <Link to={'/'} class="flex title-font font-medium items-center text-gray-900  md:mb-0 text-3xl">YouTube </Link>
     <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
       <Link to={'/'} class="mr-5 hover:text-gray-900">Home</Link>

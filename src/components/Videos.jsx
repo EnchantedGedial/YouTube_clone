@@ -1,4 +1,6 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
+import { fetchFromApi } from '../utils/fetchFromApi';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import { MdVerified } from 'react-icons/md';
 // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -6,9 +8,12 @@ import VideoDetail from './VideoDetail';
 import ReactPlayer from "react-player";
 import {Link} from "react-router-dom";
 const Videos = ({videos}) => {
+
+
+
   return (
     <>
-   {console.log(videos)}
+  
 
    <div className="container flex items-center m-2  m-auto flex-wrap justify-center">
     {videos?.map((item)=>(

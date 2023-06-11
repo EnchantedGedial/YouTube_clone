@@ -19,11 +19,14 @@ const SearchBar = () => {
     }
   return (
     <>
-    <form className="d-flex m-5" role="search">
-      <input className="form-control me-2" type="search" value={search} placeholder="Search" onChange={(e)=>{setsearch(e.target.value)}} aria-label="Search"/>
+    <form className="d-flex m-5" role="search" onSubmit={handleSubmit}>
+      <input className="form-control me-2" type="search"   value={search} placeholder="Search" onChange={(e)=>{setsearch(e.target.value)}}  required aria-label="Search"/>
       {console.log(search)}
       <a className="btn btn-outline-success" onClick={handleSubmit} >Search</a>
     </form>
+
+
+
     
       
     </>

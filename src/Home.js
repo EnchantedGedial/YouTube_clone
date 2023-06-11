@@ -8,6 +8,7 @@ import { fetchFromApi } from "./utils/fetchFromApi";
 import Feeds from './components/Feeds';
 import Videos from './components/Videos';
 import Hero from './components/Hero';
+import ChangeTheam from './components/ChangeTheam';
 
 const Home = (props) => {
 
@@ -30,6 +31,7 @@ const Home = (props) => {
 
   return (
     <>
+
     <Hero/>
       {/* <Videos videos={videos} /> */}
       <Feeds name={"codeWithHarry"}/>

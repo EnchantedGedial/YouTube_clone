@@ -4,8 +4,7 @@ const slug = () => {
   return (
     <>
 
-    sahbdjknlmahfskmn,c./vjbk,m.vbjkm.,/
-
+ 
       
     </>
   )

@@ -1,11 +1,11 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
-import { fetchFromApi } from '../utils/fetchFromApi';
+// import { useState, useEffect } from 'react';
+// import { fetchFromApi } from '../utils/fetchFromApi';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-import { MdVerified } from 'react-icons/md';
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import VideoDetail from './VideoDetail';
-import ReactPlayer from "react-player";
+// import { MdVerified } from 'react-icons/md';
+// // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import VideoDetail from './VideoDetail';
+// import ReactPlayer from "react-player";
 import {Link} from "react-router-dom";
 const Videos = ({videos}) => {
 
